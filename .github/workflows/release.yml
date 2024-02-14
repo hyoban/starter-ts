@@ -16,13 +16,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-
-      - name: Set node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: lts/*
+          node-version: 18.18.2
 
       - run: npx changelogithub
         env:

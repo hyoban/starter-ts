@@ -22,7 +22,6 @@ export default config(
   stylistic.configs['recommended-flat'],
   {
     plugins: {
-      // @ts-ignore
       antfu: eslintPluginAntfu,
     },
     rules: {

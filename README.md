@@ -6,10 +6,7 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-_description_
-
-> [!NOTE]
-> Replace `pkg-placeholder`, `_description_` and `hyoban` globally to use this template.
+$description$
 
 ## License
 

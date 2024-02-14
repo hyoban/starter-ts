@@ -1,11 +1,14 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Node template
+# misc
+.DS_Store
+*.pem
+
 # Logs
 logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
 # Runtime data
 pids
@@ -35,8 +38,11 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
-jspm_packages/
+# dependencies
+.pnp
+.pnp.js
+node_modules
+jspm_packages
 
 # TypeScript v1 declaration files
 typings/
@@ -56,14 +62,24 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
+# local env files
+# do not commit any .env files to git, except for the .env.example file. https://create.t3.gg/en/usage/env-variables#using-environment-variables
 .env
+.env*.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
+# vercel
+.vercel
+
 # next.js build output
 .next
+out
+next-env.d.ts
+
+# typescript
+*.tsbuildinfo
 
 # nuxt.js build output
 .nuxt

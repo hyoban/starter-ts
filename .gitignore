@@ -1,6 +1,37 @@
-# misc
+# must have
 .DS_Store
-*.pem
+node_modules
+dist
+dist-ssr
+*.local
+
+# local env files
+# do not commit any .env files to git, except for the .env.example file. https://create.t3.gg/en/usage/env-variables#using-environment-variables
+.env
+.env*.local
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# nitro build
+.nitro
+.output
+
+# next.js build
+.next
+out
+next-env.d.ts
+
+# typescript
+*.tsbuildinfo
+
+# nuxt.js build
+.nuxt
 
 # Logs
 logs
@@ -8,7 +39,8 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
 
 # Runtime data
 pids
@@ -41,7 +73,6 @@ build/Release
 # dependencies
 .pnp
 .pnp.js
-node_modules
 jspm_packages
 
 # TypeScript v1 declaration files
@@ -62,30 +93,11 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# local env files
-# do not commit any .env files to git, except for the .env.example file. https://create.t3.gg/en/usage/env-variables#using-environment-variables
-.env
-.env*.local
-
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
 # vercel
 .vercel
-
-# next.js build output
-.next
-out
-next-env.d.ts
-
-# typescript
-*.tsbuildinfo
-
-# nuxt.js build output
-.nuxt
-
-# Nuxt generate
-dist
 
 # Serverless directories
 .serverless

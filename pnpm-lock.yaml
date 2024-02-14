@@ -21,8 +21,8 @@ importers:
         specifier: ^8.56.0
         version: 8.56.0
       eslint-flat-config:
-        specifier: ^1.0.2
-        version: 1.0.2(eslint@8.56.0)(typescript@5.3.3)
+        specifier: ^1.0.3
+        version: 1.0.3(eslint@8.56.0)(typescript@5.3.3)
       eslint-plugin-antfu:
         specifier: ^2.1.2
         version: 2.1.2(eslint@8.56.0)
@@ -974,6 +974,13 @@ packages:
 
   /@tootallnate/quickjs-emscripten@0.23.0:
     resolution: {integrity: sha512-C5Mc6rdnsaJDjO3UpGW/CQTHtCKaYlScZTly4JIu97Jxo/odCiH0ITnDXSJPTOrEKk/ycSZ0AOgTmkDtkOsvIA==}
+    dev: true
+
+  /@types/eslint@8.56.2:
+    resolution: {integrity: sha512-uQDwm1wFHmbBbCZCqAlq6Do9LYwByNZHWzXppSnay9SuwJ+VRbjkbLABer54kcPnMSlG6Fdiy2yaFXm/z9Z5gw==}
+    dependencies:
+      '@types/estree': 1.0.5
+      '@types/json-schema': 7.0.15
     dev: true
 
   /@types/estree@1.0.5:
@@ -2106,12 +2113,13 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-flat-config@1.0.2(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-n40J0e7YRaYDQXELQD4BsfqcAl/l41WrXmUk6D68eOkUQcIHyNMW59R/iv4sJhiT52CMzxdNW7yztL4E/6rJ6Q==}
+  /eslint-flat-config@1.0.3(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-akxaL0dhrjJQyS3wO9VQsybW1gaCNha9XzGtOMMxVfuVBEPIoJ2cGZWrA0LRzetBeoGJDsrdXTx4nA8Bfzi5zg==}
     peerDependencies:
       eslint: ^8.56.0
     dependencies:
       '@eslint/js': 8.56.0
+      '@types/eslint': 8.56.2
       '@typescript-eslint/utils': 7.0.1(eslint@8.56.0)(typescript@5.3.3)
       defu: 6.1.4
       eslint: 8.56.0

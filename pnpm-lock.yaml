@@ -8,9 +8,6 @@ importers:
 
   .:
     devDependencies:
-      '@stylistic/eslint-plugin':
-        specifier: ^1.6.1
-        version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
       '@types/node':
         specifier: ^20.11.17
         version: 20.11.17
@@ -20,21 +17,9 @@ importers:
       eslint:
         specifier: ^8.56.0
         version: 8.56.0
-      eslint-flat-config:
-        specifier: ^1.0.4
-        version: 1.0.4(eslint@8.56.0)(typescript@5.3.3)
-      eslint-plugin-antfu:
-        specifier: ^2.1.2
-        version: 2.1.2(eslint@8.56.0)
-      eslint-plugin-import:
-        specifier: npm:eslint-plugin-i@^2.29.1
-        version: /eslint-plugin-i@2.29.1(@typescript-eslint/parser@7.0.1)(eslint@8.56.0)
-      eslint-plugin-simple-import-sort:
-        specifier: ^12.0.0
-        version: 12.0.0(eslint@8.56.0)
-      eslint-plugin-unicorn:
-        specifier: ^51.0.1
-        version: 51.0.1(eslint@8.56.0)
+      eslint-config-hyoban:
+        specifier: ^0.1.0
+        version: 0.1.0(@typescript-eslint/parser@7.0.1)(eslint@8.56.0)(typescript@5.3.3)
       release-it:
         specifier: ^17.0.3
         version: 17.0.3(typescript@5.3.3)
@@ -44,9 +29,6 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
-      typescript-eslint:
-        specifier: ^7.0.1
-        version: 7.0.1(eslint@8.56.0)(typescript@5.3.3)
       vitest:
         specifier: ^1.2.2
         version: 1.2.2(@types/node@20.11.17)
@@ -56,6 +38,12 @@ packages:
   /@aashutoshrathi/word-wrap@1.2.6:
     resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /@antfu/install-pkg@0.3.1:
+    resolution: {integrity: sha512-A3zWY9VeTPnxlMiZtsGHw2lSd3ghwvL8s9RiGOtqvDxhhFfZ781ynsGBa/iUnDJ5zBrmTFQrJDud3TGgRISaxw==}
+    dependencies:
+      execa: 8.0.1
     dev: true
 
   /@babel/code-frame@7.22.13:
@@ -2100,6 +2088,31 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
+  /eslint-config-hyoban@0.1.0(@typescript-eslint/parser@7.0.1)(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-Jr+LX+Mp8YqgwUU9pPUbvPgdQtKeo1FyLg1IJg/uR7pv8PYvVB6XENmI31IqOalFPyhJ5e3IdehHzLCExklOww==}
+    peerDependencies:
+      eslint: ^8.56.0
+      typescript: '>=4.7.4'
+    dependencies:
+      '@antfu/install-pkg': 0.3.1
+      '@stylistic/eslint-plugin': 1.6.1(eslint@8.56.0)(typescript@5.3.3)
+      eslint: 8.56.0
+      eslint-flat-config: 1.0.4(eslint@8.56.0)(typescript@5.3.3)
+      eslint-plugin-antfu: 2.1.2(eslint@8.56.0)
+      eslint-plugin-import: /eslint-plugin-i@2.29.1(@typescript-eslint/parser@7.0.1)(eslint@8.56.0)
+      eslint-plugin-simple-import-sort: 12.0.0(eslint@8.56.0)
+      eslint-plugin-unicorn: 51.0.1(eslint@8.56.0)
+      local-pkg: 0.5.0
+      prompts: 2.4.2
+      typescript: 5.3.3
+      typescript-eslint: 7.0.1(eslint@8.56.0)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - '@typescript-eslint/parser'
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - supports-color
+    dev: true
+
   /eslint-flat-config@1.0.4(eslint@8.56.0)(typescript@5.3.3):
     resolution: {integrity: sha512-ngZCKLKZST2cl+Gjd35GzhdtdJbtRFtAAPGCClUgiehRZ6aDrRgTFfkLMeWL/xKWEZhVnKDR2PJoJF4avG0YxA==}
     peerDependencies:
@@ -3288,6 +3301,11 @@ packages:
       json-buffer: 3.0.1
     dev: true
 
+  /kleur@3.0.3:
+    resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
+    engines: {node: '>=6'}
+    dev: true
+
   /latest-version@7.0.0:
     resolution: {integrity: sha512-KvNT4XqAMzdcL6ka6Tl3i2lYeFDgXNCuIX+xNx6ZMVR1dFq+idXd9FLKNMOIx0t9mJ9/HudyX4oZWXZQ0UJHeg==}
     engines: {node: '>=14.16'}
@@ -3950,6 +3968,14 @@ packages:
       iterate-value: 1.0.2
     dev: true
 
+  /prompts@2.4.2:
+    resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
+    engines: {node: '>= 6'}
+    dependencies:
+      kleur: 3.0.3
+      sisteransi: 1.0.5
+    dev: true
+
   /proto-list@1.2.4:
     resolution: {integrity: sha512-vtK/94akxsTMhe0/cbfpR+syPuszcuwhqVjJq26CuNDgFGj682oRBXOP5MJpv2r7JtE8MsiepGIqvvOTBwn2vA==}
     dev: true
@@ -4381,6 +4407,10 @@ packages:
   /signal-exit@4.1.0:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
+    dev: true
+
+  /sisteransi@1.0.5:
+    resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
     dev: true
 
   /slash@3.0.0:

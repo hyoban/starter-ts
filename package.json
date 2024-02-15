@@ -50,13 +50,6 @@
     "typecheck": "tsc"
   },
   "release-it": {
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": {
-          "name": "conventionalcommits"
-        }
-      }
-    },
     "git": {
       "commitMessage": "chore: release v${version}"
     },

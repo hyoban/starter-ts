@@ -45,12 +45,18 @@
     "dev": "bunchee -w",
     "lint": "eslint .",
     "prepublishOnly": "pnpm run build",
-    "release": "release-it",
     "start": "tsx src/index.ts",
     "test": "vitest",
     "typecheck": "tsc"
   },
   "release-it": {
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": {
+          "name": "conventionalcommits"
+        }
+      }
+    },
     "git": {
       "commitMessage": "chore: release v${version}"
     },
@@ -67,7 +73,6 @@
     "bunchee": "^4.4.6",
     "eslint": "^8.56.0",
     "eslint-config-hyoban": "^0.1.1",
-    "release-it": "^17.0.3",
     "tsx": "^4.7.1",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"

@@ -5,7 +5,7 @@
 [![bundle][bundle-src]][bundle-href]
 [![JSDocs][jsdocs-src]][jsdocs-href]
 
-$description$
+description
 
 ## License
 

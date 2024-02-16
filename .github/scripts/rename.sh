@@ -12,16 +12,21 @@ echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
 echo "GITHUB_REPOSITORY_OWNER: $GITHUB_REPOSITORY_OWNER"
 echo "GITHUB_REPOSITORY_DESCRIPTION: $GITHUB_REPOSITORY_DESCRIPTION"
 
+NAME=@"$GITHUB_REPOSITORY"
+if [[ $GITHUB_REPOSITORY == $GITHUB_REPOSITORY_OWNER* ]]; then
+  NAME=$(echo "$GITHUB_REPOSITORY" | sed "s/^$GITHUB_REPOSITORY_OWNER\///")
+fi
+
 # jq is like sed for JSON data
 JQ_OUTPUT=`jq \
-  --arg NAME "@$GITHUB_REPOSITORY" \
+  --arg NAME "$NAME" \
   --arg AUTHOR_NAME "$GITHUB_REPOSITORY_OWNER" \
   --arg URL "https://github.com/$GITHUB_REPOSITORY_OWNER" \
   --arg DESCRIPTION "$GITHUB_REPOSITORY_DESCRIPTION" \
-  --arg HOMEPAGE "https://github.com/$GITHUB_REPOSITORY_OWNER/$GITHUB_REPOSITORY#readme" \
-  --arg REPO_URL "https://github.com/$GITHUB_REPOSITORY_OWNER/$GITHUB_REPOSITORY.git" \
-  --arg BUGS_URL "https://github.com/$GITHUB_REPOSITORY_OWNER/$GITHUB_REPOSITORY/issues" \
-  '.name = $NAME | .description = $DESCRIPTION | .author |= ( .name = $AUTHOR_NAME | .url = $URL ) | .homepage = $REPO_URL | .repository |= ( .type = "git" | .url = $REPO_URL ) | .bugs |= ( .url = $BUGS_URL )' \
+  --arg HOMEPAGE "https://github.com/$GITHUB_REPOSITORY#readme" \
+  --arg REPO_URL "https://github.com/$GITHUB_REPOSITORY.git" \
+  --arg BUGS_URL "https://github.com/$GITHUB_REPOSITORY/issues" \
+  '.name = $NAME | .description = $DESCRIPTION | .author |= ( .name = $AUTHOR_NAME | .url = $URL ) | .homepage = $HOMEPAGE | .repository |= ( .type = "git" | .url = $REPO_URL ) | .bugs = $BUGS_URL' \
   package.json
 `
 
@@ -34,7 +39,5 @@ sedi () {
   sed --version >/dev/null 2>&1 && sed -i -- "$@" || sed -i "" "$@"
 }
 
-# Rename pkg-placeholder to the github repository name in the README.md
-sedi "s|pkg-placeholder|$GITHUB_REPOSITORY|g" "README.md"
-# Rename $description$ to the github repository description in the README.md
-sedi "s|\$description\$|$GITHUB_REPOSITORY_DESCRIPTION|g" "README.md"
+sedi "s|pkg-placeholder|$NAME|g" "README.md"
+sedi "s|description|$GITHUB_REPOSITORY_DESCRIPTION|g" "README.md"

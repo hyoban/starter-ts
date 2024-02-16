@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "packageManager": "pnpm@8.15.3",
   "description": "$description$",
-  "author": "Stephen Zhou <hi@hyoban.cc>",
+  "author": {
+    "name": "hyoban",
+    "url": "https://github.com/hyoban"
+  },
   "license": "MIT",
   "homepage": "https://github.com/hyoban/pkg-placeholder#readme",
   "repository": {

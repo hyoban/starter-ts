@@ -4,13 +4,12 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![bundle][bundle-src]][bundle-href]
 [![JSDocs][jsdocs-src]][jsdocs-href]
-[![License][license-src]][license-href]
 
 $description$
 
 ## License
 
-[MIT](./LICENSE) License © 2023-PRESENT [Stephen Zhou](https://github.com/hyoban)
+[MIT](./LICENSE) License © 2023-PRESENT
 
 <!-- Badges -->
 
@@ -20,7 +19,5 @@ $description$
 [npm-downloads-href]: https://npmjs.com/package/pkg-placeholder
 [bundle-src]: https://img.shields.io/bundlephobia/minzip/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669&label=minzip
 [bundle-href]: https://bundlephobia.com/result?p=pkg-placeholder
-[license-src]: https://img.shields.io/github/license/hyoban/pkg-placeholder.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/hyoban/pkg-placeholder/blob/main/LICENSE
 [jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
 [jsdocs-href]: https://www.jsdocs.io/package/pkg-placeholder

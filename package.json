@@ -34,15 +34,10 @@
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
+      "*": ["./dist/*", "./dist/index.d.ts"]
     }
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "bunchee",
     "dev": "bunchee -w",
@@ -67,7 +62,7 @@
     "@types/node": "^20.11.19",
     "bunchee": "^4.4.6",
     "eslint": "^8.56.0",
-    "eslint-config-hyoban": "^0.1.6",
+    "eslint-config-hyoban": "^0.1.7",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"
   }

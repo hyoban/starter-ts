@@ -18,8 +18,8 @@ importers:
         specifier: ^8.56.0
         version: 8.56.0
       eslint-config-hyoban:
-        specifier: ^0.1.7
-        version: 0.1.7(@typescript-eslint/parser@7.0.1)(eslint@8.56.0)(typescript@5.3.3)
+        specifier: ^0.1.8
+        version: 0.1.8(@typescript-eslint/parser@7.0.1)(eslint@8.56.0)(typescript@5.3.3)
       lint-staged:
         specifier: ^15.2.2
         version: 15.2.2
@@ -849,8 +849,8 @@ packages:
     resolution: {integrity: sha512-OLvgeBv3vXlnnJGIAgCLYKjgMEU+wBGj07MQ/nxAaON+3mLzX7mJbhRYrVGiVvFiXtwFlkcBa/TtmglHy0UbzQ==}
     engines: {node: ^16.0.0 || >=18.0.0}
     peerDependencies:
-      '@typescript-eslint/parser': ^7.0.0
-      eslint: ^8.56.0
+      '@typescript-eslint/parser': '>=7.0.1'
+      eslint: '>=8.56.0'
       typescript: '*'
     peerDependenciesMeta:
       typescript:
@@ -1526,8 +1526,8 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-config-hyoban@0.1.7(@typescript-eslint/parser@7.0.1)(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-wiyx5b+GSQDleW1bjaWW4rMkvBkX/8S/6QtK/gs05k/pFHePEqvQOKltb79sd5GgV1EZkXMtb2OdAsze2XlIYA==}
+  /eslint-config-hyoban@0.1.8(@typescript-eslint/parser@7.0.1)(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-dkztG/S/v2nzMogOqahMu3FGHlddSAWTdfIv4iKb5rCp1EXFcc33oa/oz9yzaBMJB/l7dEaUGaERnulPIA7HKg==}
     peerDependencies:
       '@eslint-react/eslint-plugin': '>=1.5.3'
       '@next/eslint-plugin-next': '>=14.1.0'
@@ -1551,11 +1551,13 @@ packages:
       eslint-plugin-import: /eslint-plugin-i@2.29.1(@typescript-eslint/parser@7.0.1)(eslint@8.56.0)
       eslint-plugin-simple-import-sort: 12.0.0(eslint@8.56.0)
       eslint-plugin-unicorn: 51.0.1(eslint@8.56.0)
+      eslint-plugin-unused-imports: 3.1.0(eslint@8.56.0)
       local-pkg: 0.5.0
       prompts: 2.4.2
       typescript: 5.3.3
       typescript-eslint: 7.0.1(eslint@8.56.0)(typescript@5.3.3)
     transitivePeerDependencies:
+      - '@typescript-eslint/eslint-plugin'
       - '@typescript-eslint/parser'
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -1709,6 +1711,25 @@ packages:
       strip-indent: 3.0.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /eslint-plugin-unused-imports@3.1.0(eslint@8.56.0):
+    resolution: {integrity: sha512-9l1YFCzXKkw1qtAru1RWUtG2EVDZY0a0eChKXcL+EZ5jitG7qxdctu4RnvhOJHv4xfmUf7h+JJPINlVpGhZMrw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': 6 - 7
+      eslint: '8'
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
+    dependencies:
+      eslint: 8.56.0
+      eslint-rule-composer: 0.3.0
+    dev: true
+
+  /eslint-rule-composer@0.3.0:
+    resolution: {integrity: sha512-bt+Sh8CtDmn2OajxvNO+BX7Wn4CIWMpTRm3MaiKPCQcnnlm0CS2mhui6QaoeQugs+3Kj2ESKEEGJUdVafwhiCg==}
+    engines: {node: '>=4.0.0'}
     dev: true
 
   /eslint-scope@7.2.2:

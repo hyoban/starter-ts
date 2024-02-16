@@ -33,6 +33,7 @@ jobs:
         run: |
           rm -f "./.github/scripts/rename.sh"
           rm -f "./.github/workflows/create.yml"
+          rm -f "./.github/dependabot.yml"
 
       - name: "Add remove summary"
         run: |

@@ -1,5 +1,5 @@
 # credit: https://github.com/paulrberg/foundry-template/blob/main/.github/workflows/create.yml
-name: "Create"
+name: Create
 
 # The workflow will run only when the "Use this template" button is used
 on:
@@ -11,44 +11,55 @@ jobs:
     # - https://docs.github.com/en/actions/learn-github-actions/contexts
     # - https://docs.github.com/en/actions/learn-github-actions/expressions
     if: ${{ !github.event.repository.is_template }}
-    permissions: "write-all"
-    runs-on: "ubuntu-latest"
+    permissions: write-all
+    runs-on: ubuntu-latest
     steps:
-      - name: "Check out the repo"
-        uses: "actions/checkout@v4"
+      - name: Check out the repo
+        uses: actions/checkout@v4
 
-      - name: "Update package.json"
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+
+      - name: Set node
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Update package.json
         env:
           GITHUB_REPOSITORY_DESCRIPTION: ${{ github.event.repository.description }}
         run: |
           chmod +x "./.github/scripts/rename.sh"
           ./.github/scripts/rename.sh "$GITHUB_REPOSITORY" "$GITHUB_REPOSITORY_OWNER" "$GITHUB_REPOSITORY_DESCRIPTION"
 
-      - name: "Add rename summary"
+      - name: Add rename summary
         run: |
           echo "## Commit result" >> $GITHUB_STEP_SUMMARY
           echo "✅ Passed" >> $GITHUB_STEP_SUMMARY
 
-      - name: "Remove files not needed in the user's copy of the template"
+      - name: Remove files not needed in the user's copy of the template
         run: |
           rm -f "./.github/scripts/rename.sh"
           rm -f "./.github/workflows/create.yml"
           rm -f "./.github/dependabot.yml"
 
-      - name: "Add remove summary"
+      - name: Add remove summary
         run: |
           echo "## Remove result" >> $GITHUB_STEP_SUMMARY
           echo "✅ Passed" >> $GITHUB_STEP_SUMMARY
 
-      - name: "Update commit"
-        uses: "stefanzweifel/git-auto-commit-action@v4"
+      - name: Update commit
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore: initial commit"
           commit_options: "--amend"
           push_options: "--force"
           skip_fetch: true
 
-      - name: "Add commit summary"
+      - name: Add commit summary
         run: |
           echo "## Commit result" >> $GITHUB_STEP_SUMMARY
           echo "✅ Passed" >> $GITHUB_STEP_SUMMARY

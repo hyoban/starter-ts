@@ -17,17 +17,6 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-
-      - name: Set node
-        uses: actions/setup-node@v3
-        with:
-          node-version: lts/*
-
-      - name: Install
-        run: pnpm install --frozen-lockfile
-
       - name: Update package.json
         env:
           GITHUB_REPOSITORY_DESCRIPTION: ${{ github.event.repository.description }}

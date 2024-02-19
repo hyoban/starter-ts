@@ -26,7 +26,7 @@ JQ_OUTPUT=`jq \
   --arg HOMEPAGE "https://github.com/$GITHUB_REPOSITORY#readme" \
   --arg REPO_URL "https://github.com/$GITHUB_REPOSITORY.git" \
   --arg BUGS_URL "https://github.com/$GITHUB_REPOSITORY/issues" \
-  '.name = $NAME | .description = $DESCRIPTION | .author |= ( .name = $AUTHOR_NAME | .url = $URL ) | .homepage = $HOMEPAGE | .repository |= ( .type = "git" | .url = $REPO_URL ) | .bugs = $BUGS_URL' \
+  '.name = $NAME | .description = $DESCRIPTION | .author |= ( .name = $AUTHOR_NAME | .url = $URL ) | .homepage = $HOMEPAGE | .repository = $GITHUB_REPOSITORY | .bugs = $BUGS_URL' \
   package.json
 `
 

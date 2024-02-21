@@ -49,21 +49,6 @@
     "test": "vitest",
     "typecheck": "tsc"
   },
-  "release-it": {
-    "plugins": {
-      "release-it-pnpm": {}
-    },
-    "git": {
-      "commitMessage": "chore: release v${version}"
-    },
-    "hooks": {
-      "before:init": [
-        "pnpm run lint",
-        "pnpm run typecheck",
-        "pnpm run test --run"
-      ]
-    }
-  },
   "devDependencies": {
     "@types/node": "^20.11.19",
     "bunchee": "^4.4.8",

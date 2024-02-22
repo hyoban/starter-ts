@@ -18,8 +18,8 @@ importers:
         specifier: ^8.56.0
         version: 8.56.0
       eslint-config-hyoban:
-        specifier: ^0.1.15
-        version: 0.1.15(@typescript-eslint/parser@7.0.2)(eslint@8.56.0)(typescript@5.3.3)
+        specifier: ^0.1.22
+        version: 0.1.22(@typescript-eslint/parser@7.0.2)(eslint@8.56.0)(typescript@5.3.3)
       lint-staged:
         specifier: ^15.2.2
         version: 15.2.2
@@ -27,8 +27,8 @@ importers:
         specifier: ^17.1.1
         version: 17.1.1(typescript@5.3.3)
       release-it-pnpm:
-        specifier: ^2.2.2
-        version: 2.2.2(release-it@17.1.1)
+        specifier: ^2.2.3
+        version: 2.2.3(release-it@17.1.1)
       simple-git-hooks:
         specifier: ^2.9.0
         version: 2.9.0
@@ -2340,8 +2340,9 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-config-hyoban@0.1.15(@typescript-eslint/parser@7.0.2)(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-dDB1Y3i+6+Fy74Bw+m518hHKvsTX/0tfjSEnysgOKza1u4IZjactqxvss4ihpRlvUA1t2j4lqXHTvgJGm3//Lw==}
+  /eslint-config-hyoban@0.1.22(@typescript-eslint/parser@7.0.2)(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-Hf52mSLtSL75ln9zml4m+lV9XikM7WQ5CEZWtaKUZ5zCRT/eI9Hs89mt/DyrpdCfz9A5PmzhN3lOZIDxLDLIVA==}
+    hasBin: true
     peerDependencies:
       '@eslint-react/eslint-plugin': '>=1.5.3'
       '@next/eslint-plugin-next': '>=14.1.0'
@@ -4751,8 +4752,8 @@ packages:
       jsesc: 0.5.0
     dev: true
 
-  /release-it-pnpm@2.2.2(release-it@17.1.1):
-    resolution: {integrity: sha512-aXsab1530RHbe+oKVMchdmw1uiEaDStWIh03NTWR83cdZwGOzhP14PtWkFXUwOCLKpLxFsinG8Sb0at7gYMW/g==}
+  /release-it-pnpm@2.2.3(release-it@17.1.1):
+    resolution: {integrity: sha512-8mvLlq5NVLu9kgo3+5pfOzjfj5UEN0JMxAVLFmbBfBH2EwwzsUQ5h3wpq5zSQwp8U/DwTiNCCfdttUomHi6pvQ==}
     hasBin: true
     peerDependencies:
       release-it: ^17.0.0

@@ -2,7 +2,7 @@
   "name": "pkg-placeholder",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@8.15.3",
+  "packageManager": "pnpm@8.15.4",
   "description": "$description$",
   "author": {
     "name": "hyoban",
@@ -50,13 +50,13 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@types/node": "^20.11.19",
+    "@types/node": "^20.11.20",
     "bunchee": "^4.4.8",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "eslint-config-hyoban": "^0.1.22",
     "lint-staged": "^15.2.2",
     "release-it": "^17.1.1",
-    "release-it-pnpm": "^2.2.3",
+    "release-it-pnpm": "^2.2.4",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.3.3",
     "vitest": "^1.3.1"

@@ -20,6 +20,7 @@ fi
 # jq is like sed for JSON data
 JQ_OUTPUT=`jq \
   --arg NAME "$NAME" \
+  --arg GITHUB_REPOSITORY "$GITHUB_REPOSITORY" \
   --arg AUTHOR_NAME "$GITHUB_REPOSITORY_OWNER" \
   --arg URL "https://github.com/$GITHUB_REPOSITORY_OWNER" \
   --arg DESCRIPTION "$GITHUB_REPOSITORY_DESCRIPTION" \

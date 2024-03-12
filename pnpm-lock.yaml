@@ -15,8 +15,8 @@ devDependencies:
     specifier: ^8.57.0
     version: 8.57.0
   eslint-config-hyoban:
-    specifier: ^0.1.27
-    version: 0.1.27(@typescript-eslint/parser@7.1.1)(eslint@8.57.0)(typescript@5.3.3)
+    specifier: ^0.1.39
+    version: 0.1.39(@typescript-eslint/parser@7.1.1)(eslint@8.57.0)(typescript@5.3.3)
   lint-staged:
     specifier: ^15.2.2
     version: 15.2.2
@@ -2574,8 +2574,8 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-config-hyoban@0.1.27(@typescript-eslint/parser@7.1.1)(eslint@8.57.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-OnZPPONIGxlEH7412sKEUuI7po0b8vwVmeok5lUPHfBemtyM+ackTAox8BARDuXokfdGIqotDMs64pEkWzMHvg==}
+  /eslint-config-hyoban@0.1.39(@typescript-eslint/parser@7.1.1)(eslint@8.57.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-l/UiyUU9lCyjY98Gjpm+V7oV9drTmdEjVKElW4w2zfV4EVmxo65JYgsxaT+QFOX5gkdXSsilvb+a4ypEVfeKxg==}
     hasBin: true
     peerDependencies:
       '@eslint-react/eslint-plugin': '>=1.5.3'
@@ -2596,9 +2596,9 @@ packages:
       eslint: 8.57.0
       eslint-flat-config: 1.1.8(eslint@8.57.0)(typescript@5.3.3)
       eslint-plugin-antfu: 2.1.2(eslint@8.57.0)
-      eslint-plugin-early-return: 0.0.6(eslint@8.57.0)(typescript@5.3.3)
       eslint-plugin-format: 0.1.0(eslint@8.57.0)
       eslint-plugin-github: 4.10.2(eslint@8.57.0)(typescript@5.3.3)
+      eslint-plugin-hyoban: 0.2.6(eslint@8.57.0)(typescript@5.3.3)
       eslint-plugin-import: /eslint-plugin-i@2.29.1(@typescript-eslint/parser@7.1.1)(eslint@8.57.0)
       eslint-plugin-jsonc: 2.13.0(eslint@8.57.0)
       eslint-plugin-package-json: 0.10.4(eslint@8.57.0)(jsonc-eslint-parser@2.4.0)
@@ -2704,16 +2704,6 @@ packages:
       eslint: 8.57.0
     dev: true
 
-  /eslint-plugin-early-return@0.0.6(eslint@8.57.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-8Hcle4mrYmbaqXIXWxdOQO+5/nYId9PwuWx5+7C3k1i0pMchRg0CewmiyKvYEBbsnXV2raLyjQg8nkTTzGuxew==}
-    dependencies:
-      '@typescript-eslint/utils': 7.1.1(eslint@8.57.0)(typescript@5.3.3)
-    transitivePeerDependencies:
-      - eslint
-      - supports-color
-      - typescript
-    dev: true
-
   /eslint-plugin-escompat@3.4.0(eslint@8.57.0):
     resolution: {integrity: sha512-ufTPv8cwCxTNoLnTZBFTQ5SxU2w7E7wiMIS7PSxsgP1eAxFjtSaoZ80LRn64hI8iYziE6kJG6gX/ZCJVxh48Bg==}
     peerDependencies:
@@ -2789,6 +2779,16 @@ packages:
       - '@types/eslint'
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
+      - supports-color
+      - typescript
+    dev: true
+
+  /eslint-plugin-hyoban@0.2.6(eslint@8.57.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-kmOhhVYlg1jXkLVMIOnGrKCdJxRW614AtL7VnAdiXbc8T/V1zkVJCGmCg7F9XYAwYI3ja0h88sYSmgHP2BGZog==}
+    dependencies:
+      '@typescript-eslint/utils': 7.1.1(eslint@8.57.0)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - eslint
       - supports-color
       - typescript
     dev: true

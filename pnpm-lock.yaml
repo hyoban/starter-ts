@@ -27,8 +27,8 @@ importers:
         specifier: ^17.1.1
         version: 17.1.1(typescript@5.3.3)
       release-it-pnpm:
-        specifier: ^4.0.0-beta.1
-        version: 4.0.0-beta.1(release-it@17.1.1)
+        specifier: ^4.0.0-beta.2
+        version: 4.0.0-beta.2(release-it@17.1.1)
       simple-git-hooks:
         specifier: ^2.10.0
         version: 2.10.0
@@ -5398,8 +5398,8 @@ packages:
       jsesc: 0.5.0
     dev: true
 
-  /release-it-pnpm@4.0.0-beta.1(release-it@17.1.1):
-    resolution: {integrity: sha512-2RWf9ocs3VTx6hkeQio1su035K2WPHoMCHzZPJLQ5V/LjFM6tLUCkeCb7RlnbuGUlpqbkBbCdZsFxIi6eosZoQ==}
+  /release-it-pnpm@4.0.0-beta.2(release-it@17.1.1):
+    resolution: {integrity: sha512-YUz3gcCjS5O/gY6esKz3V/APpaFOFJk+b5nBMG/2w8guJQLup1MhqzMCODdRB2oRd2Q+tKvlDCs9Zt3kX7EZYA==}
     hasBin: true
     peerDependencies:
       release-it: ^17.0.0

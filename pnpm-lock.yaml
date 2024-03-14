@@ -27,7 +27,7 @@ importers:
         specifier: ^17.1.1
         version: 17.1.1(typescript@5.4.2)
       release-it-pnpm:
-        specifier: ^4.0.1
+        specifier: ^4.0.2
         version: 4.0.2(release-it@17.1.1)
       simple-git-hooks:
         specifier: ^2.10.0

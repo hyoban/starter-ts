@@ -3,5 +3,7 @@
   "extends": [
     "local>hyoban/renovate-config"
   ],
-  "automerge": true
+  "automerge": true,
+  "ignoreTests": true,
+  "automergeType": "branch"
 }

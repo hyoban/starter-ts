@@ -53,7 +53,7 @@
     "@types/node": "^20.11.30",
     "bunchee": "^4.4.8",
     "eslint": "^8.57.0",
-    "eslint-config-hyoban": "^0.2.2",
+    "eslint-config-hyoban": "^0.2.8",
     "lint-staged": "^15.2.2",
     "release-it": "^17.1.1",
     "release-it-pnpm": "^4.1.3",

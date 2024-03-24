@@ -10,7 +10,10 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/hyoban/pkg-placeholder#readme",
-  "repository": "hyoban/pkg-placeholder",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyoban/pkg-placeholder.git"
+  },
   "bugs": "https://github.com/hyoban/pkg-placeholder/issues",
   "keywords": [],
   "sideEffects": false,

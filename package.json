@@ -55,7 +55,7 @@
     "@types/node": "^20.11.30",
     "bunchee": "^5.0.0",
     "eslint": "^8.57.0",
-    "eslint-config-hyoban": "^0.2.13",
+    "eslint-config-hyoban": "^0.2.15",
     "release-it": "^17.1.1",
     "release-it-pnpm": "^4.1.6",
     "typescript": "^5.4.3",

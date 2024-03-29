@@ -33,11 +33,8 @@ jobs:
             - args: [--frozen-lockfile]
             - args: [--global, release-it, release-it-pnpm]
 
-      - name: Install
-        run: pnpm install --frozen-lockfile
-
       - name: Release
-        run: if npx should-semantic-release ; then npx release-it --verbose ; fi
+        run: release-it --verbose
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

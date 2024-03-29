@@ -10,66 +10,38 @@ on:
       - main
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-
-      - name: Set node
-        uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-
-      - name: Install
-        run: pnpm install --frozen-lockfile
-
-      - name: Lint
-        run: pnpm run lint
-
-  typecheck:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-
-      - name: Set node
-        uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-
-      - name: Install
-        run: pnpm install --frozen-lockfile
-
-      - name: Typecheck
-        run: pnpm run typecheck
-
   test:
-    runs-on: ${{ matrix.os }}
-
+    name: Test
     strategy:
       matrix:
         node: [lts/*]
         os: [ubuntu-latest, windows-latest]
       fail-fast: false
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
 
       - name: Set node ${{ matrix.node }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install
-        run: pnpm install --frozen-lockfile
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
+
+      - name: Lint
+        if: ${{ matrix.os == 'ubuntu-latest' }}
+        run: pnpm run lint
+
+      - name: Type check
+        if: ${{ matrix.os == 'ubuntu-latest' }}
+        run: pnpm run typecheck
 
       - name: Build
         run: pnpm run build

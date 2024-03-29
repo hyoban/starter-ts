@@ -20,14 +20,18 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-
       - name: Set node
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
           registry-url: 'https://registry.npmjs.org'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          run_install: |
+            - args: [--frozen-lockfile]
+            - args: [--global, release-it, release-it-pnpm]
 
       - name: Install
         run: pnpm install --frozen-lockfile

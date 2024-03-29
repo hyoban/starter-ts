@@ -14,7 +14,7 @@ jobs:
     name: Test
     strategy:
       matrix:
-        node: [lts/*]
+        node: [lts/*, lts/-1]
         os: [ubuntu-latest, windows-latest]
       fail-fast: false
     runs-on: ${{ matrix.os }}

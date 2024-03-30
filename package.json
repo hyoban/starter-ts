@@ -55,7 +55,7 @@
     "@types/node": "20.11.30",
     "bunchee": "^5.0.1",
     "eslint": "^8.57.0",
-    "eslint-config-hyoban": "^0.3.0",
+    "eslint-config-hyoban": "^0.3.2",
     "typescript": "^5.4.3",
     "vitest": "^1.4.0"
   }

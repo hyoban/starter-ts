@@ -52,7 +52,7 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@types/node": "^20.11.30",
+    "@types/node": "20.11.30",
     "bunchee": "^5.0.1",
     "eslint": "^8.57.0",
     "eslint-config-hyoban": "^0.3.0",

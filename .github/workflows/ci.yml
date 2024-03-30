@@ -48,5 +48,8 @@ jobs:
       - name: Pub Lint
         run: npx publint
 
+      - name: Are The Types Wrong
+        run: npx -p @arethetypeswrong/cli attw --pack .
+
       - name: Test
         run: pnpm run test

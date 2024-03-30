@@ -33,6 +33,7 @@ jobs:
         with:
           run_install: |
             - args: [--frozen-lockfile]
+            - args: [--global, publint, @arethetypeswrong/cli, knip]
 
       - name: Lint
         if: ${{ matrix.os == 'ubuntu-latest' }}
@@ -45,17 +46,21 @@ jobs:
       - name: Build
         run: pnpm run build
 
+      - name: Test
+        run: pnpm run test
+
       - name: Pub Lint
         if: ${{ matrix.os == 'ubuntu-latest' }}
-        run: npx publint
+        run: publint
 
       - name: Are The Types Wrong
         if: ${{ matrix.os == 'ubuntu-latest' }}
-        run: npx -p @arethetypeswrong/cli attw --pack .
+        run: attw --pack .
 
       - name: Dedupe
         if: ${{ matrix.os == 'ubuntu-latest' }}
         run: pnpm dedupe --check
 
-      - name: Test
-        run: pnpm run test
+      - name: Knip
+        if: ${{ matrix.os == 'ubuntu-latest' }}
+        run: knip

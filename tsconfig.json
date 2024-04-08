@@ -15,8 +15,7 @@
     "noUncheckedIndexedAccess": true,
 
     /* If NOT transpiling with TypeScript: */
-    "moduleResolution": "Bundler",
-    "module": "ESNext",
+    "module": "preserve",
     "noEmit": true,
 
     /* If your code doesn't run in the DOM: */

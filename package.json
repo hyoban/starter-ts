@@ -1,22 +1,21 @@
 {
 	"name": "pkg-placeholder",
-	"type": "module",
 	"version": "0.0.0",
-	"packageManager": "pnpm@8.15.6",
 	"description": "$description$",
-	"author": {
-		"name": "hyoban",
-		"url": "https://github.com/hyoban"
-	},
-	"license": "MIT",
+	"keywords": [],
 	"homepage": "https://github.com/hyoban/pkg-placeholder#readme",
+	"bugs": "https://github.com/hyoban/pkg-placeholder/issues",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/hyoban/pkg-placeholder.git"
 	},
-	"bugs": "https://github.com/hyoban/pkg-placeholder/issues",
-	"keywords": [],
+	"license": "MIT",
+	"author": {
+		"name": "hyoban",
+		"url": "https://github.com/hyoban"
+	},
 	"sideEffects": false,
+	"type": "module",
 	"exports": {
 		".": {
 			"import": {
@@ -38,8 +37,8 @@
 	"scripts": {
 		"build": "bunchee",
 		"dev": "bunchee -w",
-		"lint": "eslint . && prettier --check .",
-		"lint:fix": "eslint . --fix && prettier --write .",
+		"lint": "prettier --check . && eslint .",
+		"lint:fix": "prettier --write . && eslint . --fix",
 		"prepublishOnly": "pnpm run build",
 		"test": "vitest",
 		"typecheck": "tsc"
@@ -49,10 +48,12 @@
 		"@types/node": "20.11.30",
 		"bunchee": "^5.1.2",
 		"eslint": "^9.0.0",
-		"eslint-config-hyoban": "^0.6.0",
+		"eslint-config-hyoban": "^0.7.1",
 		"prettier": "^3.2.5",
 		"prettier-plugin-curly": "^0.2.1",
+		"prettier-plugin-packagejson": "^2.4.14",
 		"typescript": "^5.4.5",
 		"vitest": "^1.4.0"
-	}
+	},
+	"packageManager": "pnpm@8.15.6"
 }

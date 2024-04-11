@@ -1,54 +1,58 @@
 {
-  "name": "pkg-placeholder",
-  "type": "module",
-  "version": "0.0.0",
-  "packageManager": "pnpm@8.15.6",
-  "description": "$description$",
-  "author": {
-    "name": "hyoban",
-    "url": "https://github.com/hyoban"
-  },
-  "license": "MIT",
-  "homepage": "https://github.com/hyoban/pkg-placeholder#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hyoban/pkg-placeholder.git"
-  },
-  "bugs": "https://github.com/hyoban/pkg-placeholder/issues",
-  "keywords": [],
-  "sideEffects": false,
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/es/index.d.ts",
-        "default": "./dist/es/index.js"
-      },
-      "require": {
-        "types": "./dist/cjs/index.d.cts",
-        "default": "./dist/cjs/index.cjs"
-      }
-    }
-  },
-  "main": "./dist/cjs/index.cjs",
-  "module": "./dist/es/index.js",
-  "types": "./dist/es/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "bunchee",
-    "dev": "bunchee -w",
-    "lint": "eslint",
-    "prepublishOnly": "pnpm run build",
-    "test": "vitest",
-    "typecheck": "tsc"
-  },
-  "devDependencies": {
-    "@types/node": "20.11.30",
-    "bunchee": "^5.1.2",
-    "eslint": "^9.0.0",
-    "eslint-config-hyoban": "^0.4.0",
-    "typescript": "^5.4.4",
-    "vitest": "^1.4.0"
-  }
+	"name": "pkg-placeholder",
+	"type": "module",
+	"version": "0.0.0",
+	"packageManager": "pnpm@8.15.6",
+	"description": "$description$",
+	"author": {
+		"name": "hyoban",
+		"url": "https://github.com/hyoban"
+	},
+	"license": "MIT",
+	"homepage": "https://github.com/hyoban/pkg-placeholder#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hyoban/pkg-placeholder.git"
+	},
+	"bugs": "https://github.com/hyoban/pkg-placeholder/issues",
+	"keywords": [],
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/es/index.d.ts",
+				"default": "./dist/es/index.js"
+			},
+			"require": {
+				"types": "./dist/cjs/index.d.cts",
+				"default": "./dist/cjs/index.cjs"
+			}
+		}
+	},
+	"main": "./dist/cjs/index.cjs",
+	"module": "./dist/es/index.js",
+	"types": "./dist/es/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "bunchee",
+		"dev": "bunchee -w",
+		"lint": "eslint . && prettier --check .",
+		"lint:fix": "eslint . --fix && prettier --write .",
+		"prepublishOnly": "pnpm run build",
+		"test": "vitest",
+		"typecheck": "tsc"
+	},
+	"devDependencies": {
+		"@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+		"@types/node": "20.11.30",
+		"bunchee": "^5.1.2",
+		"eslint": "^9.0.0",
+		"eslint-config-hyoban": "^0.5.1",
+		"prettier": "^3.2.5",
+		"prettier-plugin-curly": "^0.2.1",
+		"typescript": "^5.4.5",
+		"vitest": "^1.4.0"
+	}
 }

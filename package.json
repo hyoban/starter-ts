@@ -49,7 +49,7 @@
 		"@types/node": "20.11.30",
 		"bunchee": "^5.1.2",
 		"eslint": "^9.0.0",
-		"eslint-config-hyoban": "^0.5.1",
+		"eslint-config-hyoban": "^0.6.0",
 		"prettier": "^3.2.5",
 		"prettier-plugin-curly": "^0.2.1",
 		"typescript": "^5.4.5",

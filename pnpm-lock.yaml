@@ -21,8 +21,8 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0
       eslint-config-hyoban:
-        specifier: ^0.5.1
-        version: 0.5.1(eslint@9.0.0)(typescript@5.4.5)
+        specifier: ^0.6.0
+        version: 0.6.0(eslint@9.0.0)(typescript@5.4.5)
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
@@ -1742,8 +1742,8 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-config-hyoban@0.5.1(eslint@9.0.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-rfk4mHl6Nv730b6Het/v1AsyMs5fZxh0PPQ09WLNRE2TX6Gh2JE9mT6k15V10vDGuZ5qPI+SnNf+ulCN94PMlg==}
+  /eslint-config-hyoban@0.6.0(eslint@9.0.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-gGlXk8Du6F+SGrON/iAlc/gaRNIvpNBJfVxxoJh7nCjfU9nqJ3HmLXl+g/fvCink1D1Nxo66+1Y7c9JINHZHLw==}
     hasBin: true
     peerDependencies:
       eslint: ^8.56.0 || ^9.0.0

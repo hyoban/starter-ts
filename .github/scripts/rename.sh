@@ -19,16 +19,17 @@ fi
 
 # jq is like sed for JSON data
 JQ_OUTPUT=`jq \
+  --tab \
   --arg NAME "$NAME" \
   --arg GITHUB_REPOSITORY "$GITHUB_REPOSITORY" \
   --arg AUTHOR_NAME "$GITHUB_REPOSITORY_OWNER" \
   --arg URL "https://github.com/$GITHUB_REPOSITORY_OWNER" \
   --arg DESCRIPTION "$GITHUB_REPOSITORY_DESCRIPTION" \
   --arg HOMEPAGE "https://github.com/$GITHUB_REPOSITORY#readme" \
-  --arg REPO_URL "https://github.com/$GITHUB_REPOSITORY.git" \
+  --arg REPO_URL "git+https://github.com/$GITHUB_REPOSITORY.git" \
   --arg BUGS_URL "https://github.com/$GITHUB_REPOSITORY/issues" \
   --arg TYPE "git" \
-  '.name = $NAME | .description = $DESCRIPTION | .author |= ( .name = $AUTHOR_NAME | .url = $URL ) | .homepage = $HOMEPAGE | .repository |= ( .type = $TYPE | .url = $GITHUB_REPOSITORY ) | .bugs = $BUGS_URL' \
+  '.name = $NAME | .description = $DESCRIPTION | .author |= ( .name = $AUTHOR_NAME | .url = $URL ) | .homepage = $HOMEPAGE | .repository |= ( .type = $TYPE | .url = $REPO_URL ) | .bugs = $BUGS_URL' \
   package.json
 `
 

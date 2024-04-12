@@ -44,14 +44,11 @@
 		"typecheck": "tsc"
 	},
 	"devDependencies": {
-		"@ianvs/prettier-plugin-sort-imports": "^4.2.1",
 		"@types/node": "20.11.30",
 		"bunchee": "^5.1.2",
 		"eslint": "^9.0.0",
-		"eslint-config-hyoban": "^0.7.6",
+		"eslint-config-hyoban": "^0.7.7",
 		"prettier": "^3.2.5",
-		"prettier-plugin-curly": "^0.2.1",
-		"prettier-plugin-packagejson": "^2.5.0",
 		"typescript": "^5.4.5",
 		"vitest": "^1.5.0"
 	},

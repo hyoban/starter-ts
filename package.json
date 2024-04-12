@@ -1,21 +1,22 @@
 {
 	"name": "pkg-placeholder",
+	"type": "module",
 	"version": "0.0.0",
+	"packageManager": "pnpm@8.15.6",
 	"description": "$description$",
-	"keywords": [],
-	"homepage": "https://github.com/hyoban/pkg-placeholder#readme",
-	"bugs": "https://github.com/hyoban/pkg-placeholder/issues",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/hyoban/pkg-placeholder.git"
-	},
-	"license": "MIT",
 	"author": {
 		"name": "hyoban",
 		"url": "https://github.com/hyoban"
 	},
+	"license": "MIT",
+	"homepage": "https://github.com/hyoban/pkg-placeholder#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hyoban/pkg-placeholder.git"
+	},
+	"bugs": "https://github.com/hyoban/pkg-placeholder/issues",
+	"keywords": [],
 	"sideEffects": false,
-	"type": "module",
 	"exports": {
 		".": {
 			"import": {
@@ -47,10 +48,9 @@
 		"@types/node": "20.11.30",
 		"bunchee": "^5.1.2",
 		"eslint": "^9.0.0",
-		"eslint-config-hyoban": "^0.7.7",
+		"eslint-config-hyoban": "^0.7.8",
 		"prettier": "^3.2.5",
 		"typescript": "^5.4.5",
 		"vitest": "^1.5.0"
-	},
-	"packageManager": "pnpm@8.15.6"
+	}
 }

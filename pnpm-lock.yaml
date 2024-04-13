@@ -18,14 +18,14 @@ importers:
         specifier: ^9.0.0
         version: 9.0.0
       eslint-config-hyoban:
-        specifier: ^0.7.8
-        version: 0.7.8(@typescript-eslint/parser@7.6.0)(eslint@9.0.0)(typescript@5.4.5)
+        specifier: ^1.0.0
+        version: 1.0.0(@typescript-eslint/parser@7.6.0)(eslint@9.0.0)(typescript@5.4.5)
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
       prettier-config-hyoban:
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -832,8 +832,8 @@ packages:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
     dev: true
 
-  /@types/eslint@8.56.8:
-    resolution: {integrity: sha512-LdDdQVDzDXf3ijhhMnE27C5vc0QEknD8GiMR/Hi+fVbdZNfAfCy2j69m0LjUd2MAy0+kIgnOtd5ndTmDk/VWCA==}
+  /@types/eslint@8.56.9:
+    resolution: {integrity: sha512-W4W3KcqzjJ0sHg2vAq9vfml6OhsJ53TcUjUqfzzZf/EChUtwspszj/S0pzMxnfRcO55/iGq47dscXw71Fxc4Zg==}
     dependencies:
       '@types/estree': 1.0.5
       '@types/json-schema': 7.0.15
@@ -1459,16 +1459,15 @@ packages:
       parse-gitignore: 2.0.0
     dev: true
 
-  /eslint-config-hyoban@0.7.8(@typescript-eslint/parser@7.6.0)(eslint@9.0.0)(typescript@5.4.5):
-    resolution: {integrity: sha512-hg2CMgpMSRtJAB1V76mJvhOPuD4UvV6juRQNaVjewPXc9VLntePyXr6XN8DptJt7aY4xF5aSXSe9zObWc7nLlg==}
-    hasBin: true
+  /eslint-config-hyoban@1.0.0(@typescript-eslint/parser@7.6.0)(eslint@9.0.0)(typescript@5.4.5):
+    resolution: {integrity: sha512-m2ePzC29gS4lDDP3zBwm316IeKAa54OGKeJihRCYE2e1HLbzcSz8BOO9GM25aiJDB4t8x/GB8++N/6Jqi5gTQg==}
     peerDependencies:
       eslint: ^8.56.0 || ^9.0.0
       typescript: '>=4.7.4'
     dependencies:
       '@eslint-react/eslint-plugin': 1.5.8(@typescript-eslint/parser@7.6.0)(eslint@9.0.0)(typescript@5.4.5)
       '@eslint/js': 9.0.0
-      '@types/eslint': 8.56.8
+      '@types/eslint': 8.56.9
       defu: 6.1.4
       eslint: 9.0.0
       eslint-config-flat-gitignore: 0.1.5
@@ -1478,7 +1477,7 @@ packages:
       eslint-plugin-jsonc: 2.15.1(eslint@9.0.0)
       eslint-plugin-package-json: 0.12.2(eslint@9.0.0)(jsonc-eslint-parser@2.4.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@9.0.0)
-      eslint-plugin-simple-import-sort: 12.0.0(eslint@9.0.0)
+      eslint-plugin-simple-import-sort: 12.1.0(eslint@9.0.0)
       eslint-plugin-unicorn: 52.0.0(eslint@9.0.0)
       jsonc-eslint-parser: 2.4.0
       typescript: 5.4.5
@@ -1683,8 +1682,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-simple-import-sort@12.0.0(eslint@9.0.0):
-    resolution: {integrity: sha512-8o0dVEdAkYap0Cn5kNeklaKcT1nUsa3LITWEuFk3nJifOoD+5JQGoyDUW2W/iPWwBsNBJpyJS9y4je/BgxLcyQ==}
+  /eslint-plugin-simple-import-sort@12.1.0(eslint@9.0.0):
+    resolution: {integrity: sha512-Y2fqAfC11TcG/WP3TrI1Gi3p3nc8XJyEOJYHyEPEGI/UAgNx6akxxlX74p7SbAQdLcgASKhj8M0GKvH3vq/+ig==}
     peerDependencies:
       eslint: '>=5.0.0'
     dependencies:
@@ -2582,8 +2581,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-config-hyoban@1.0.0:
-    resolution: {integrity: sha512-YcIhv6KGDGl+tEzL5zBf4Ir2KKTFeiCCvTrS+/gl2hc45Dd3bxYUTYaV4nh8vHm1yQ3HvkD2Yvsp7CffTtGE8A==}
+  /prettier-config-hyoban@1.0.1:
+    resolution: {integrity: sha512-eZqogDtSS4utpW+szRG7tpnJwE7btsU3hVO12VHq39XFZMColvNr/fpNyzy3NDBr2eXY6eMRlwFCDGUrxxBYVA==}
     dev: true
 
   /prettier@3.2.5:

@@ -24,8 +24,8 @@ importers:
         specifier: ^3.2.5
         version: 3.2.5
       prettier-config-hyoban:
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: ^1.0.3
+        version: 1.0.3
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -2587,8 +2587,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-config-hyoban@1.0.2:
-    resolution: {integrity: sha512-iBWzjnnl2wBNVCWcXe9clciYSqF3Q1lJ+WnR7f2xfqOxjYs5sSp48F4lKn4O1Y1EN0Tg9zU2ObJ/8LAa7wwpKg==}
+  /prettier-config-hyoban@1.0.3:
+    resolution: {integrity: sha512-KfLZJcRg+XVTPJU0L+15xetKMpZORxD5bPJoi5Clh54y+mBpHNXdkPtRd1jNIYsRI2DJGdlr05TW2n9QfpRw0Q==}
     dev: true
 
   /prettier@3.2.5:

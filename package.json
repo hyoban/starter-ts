@@ -52,5 +52,16 @@
 		"prettier": "^3.2.5",
 		"typescript": "^5.4.5",
 		"vitest": "^1.5.0"
+	},
+	"prettier": {
+		"useTabs": true,
+		"overrides": [
+			{
+				"files": "**/pnpm-lock.yaml",
+				"options": {
+					"requirePragma": true
+				}
+			}
+		]
 	}
 }

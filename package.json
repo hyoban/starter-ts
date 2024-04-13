@@ -38,8 +38,8 @@
 	"scripts": {
 		"build": "bunchee",
 		"dev": "bunchee -w",
-		"lint": "prettier --check . && eslint .",
-		"lint:fix": "prettier --write . && eslint . --fix",
+		"lint": "prettier --list-different . && eslint",
+		"lint:fix": "prettier --list-different --write . && eslint --fix",
 		"prepublishOnly": "pnpm run build",
 		"test": "vitest",
 		"typecheck": "tsc"

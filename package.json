@@ -41,6 +41,7 @@
 		"lint": "prettier --list-different . && eslint",
 		"lint:fix": "prettier --list-different --write . && eslint --fix",
 		"prepublishOnly": "pnpm run build",
+		"release": "release-it",
 		"test": "vitest",
 		"typecheck": "tsc"
 	},

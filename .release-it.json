@@ -1,8 +1,8 @@
 {
-	"plugins": {
-		"release-it-pnpm": {}
-	},
-	"git": {
-		"commitMessage": "chore: release ${version}"
-	}
+  "plugins": {
+    "release-it-pnpm": {}
+  },
+  "git": {
+    "commitMessage": "chore: release ${version}"
+  }
 }

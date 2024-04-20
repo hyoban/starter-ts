@@ -1,61 +1,58 @@
 {
-	"name": "pkg-placeholder",
-	"type": "module",
-	"version": "0.0.0",
-	"packageManager": "pnpm@9.0.2",
-	"description": "$description$",
-	"author": {
-		"name": "hyoban",
-		"url": "https://github.com/hyoban"
-	},
-	"license": "MIT",
-	"homepage": "https://github.com/hyoban/pkg-placeholder#readme",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/hyoban/pkg-placeholder.git"
-	},
-	"bugs": "https://github.com/hyoban/pkg-placeholder/issues",
-	"keywords": [],
-	"sideEffects": false,
-	"exports": {
-		".": {
-			"import": {
-				"types": "./dist/es/index.d.ts",
-				"default": "./dist/es/index.js"
-			},
-			"require": {
-				"types": "./dist/cjs/index.d.cts",
-				"default": "./dist/cjs/index.cjs"
-			}
-		}
-	},
-	"main": "./dist/cjs/index.cjs",
-	"module": "./dist/es/index.js",
-	"types": "./dist/es/index.d.ts",
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"build": "bunchee",
-		"dev": "bunchee -w",
-		"lint": "prettier --list-different . && eslint",
-		"lint:fix": "prettier --list-different --write . && eslint --fix",
-		"prepublishOnly": "pnpm run build",
-		"release": "release-it",
-		"test": "vitest",
-		"typecheck": "tsc"
-	},
-	"devDependencies": {
-		"@types/node": "20.11.30",
-		"bunchee": "^5.1.2",
-		"eslint": "^9.0.0",
-		"eslint-config-hyoban": "^1.0.1",
-		"prettier": "^3.2.5",
-		"prettier-config-hyoban": "^1.0.3",
-		"release-it": "^17.2.0",
-		"release-it-pnpm": "^4.3.6",
-		"typescript": "^5.4.5",
-		"vitest": "^1.5.0"
-	},
-	"prettier": "prettier-config-hyoban"
+  "name": "pkg-placeholder",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.0.4",
+  "description": "$description$",
+  "author": {
+    "name": "hyoban",
+    "url": "https://github.com/hyoban"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/hyoban/pkg-placeholder#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyoban/pkg-placeholder.git"
+  },
+  "bugs": "https://github.com/hyoban/pkg-placeholder/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/es/index.d.ts",
+        "default": "./dist/es/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/es/index.js",
+  "types": "./dist/es/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bunchee",
+    "dev": "bunchee -w",
+    "lint": "prettier --list-different . && eslint",
+    "lint:fix": "prettier --list-different --write . && eslint --fix",
+    "prepublishOnly": "pnpm run build",
+    "test": "vitest",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.30",
+    "bunchee": "^5.1.2",
+    "eslint": "^9.1.0",
+    "eslint-config-hyoban": "^1.0.3",
+    "prettier": "^3.2.5",
+    "prettier-config-hyoban": "^2.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
+  },
+  "prettier": "prettier-config-hyoban"
 }

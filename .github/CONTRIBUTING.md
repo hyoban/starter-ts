@@ -1,3 +1,3 @@
 # Contributing
 
-Please refer to https://github.com/hyoban/.github/blob/main/CONTRIBUTING.md
+Please refer to [antfu/contribute](https://github.com/antfu/contribute), most of the rules are the same.

@@ -51,6 +51,5 @@
     "eslint-config-hyoban": "^2.1.0",
     "typescript": "^5.4.5",
     "vitest": "^1.5.0"
-  },
-  "prettier": "prettier-config-hyoban"
+  }
 }

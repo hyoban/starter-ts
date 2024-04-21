@@ -37,7 +37,7 @@
   ],
   "scripts": {
     "build": "bunchee",
-    "dev": "bunchee -w",
+    "dev": "bunchee --watch",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "prepublishOnly": "pnpm run build",

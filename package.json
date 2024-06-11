@@ -42,7 +42,6 @@
     "lint:fix": "eslint --fix",
     "prepare": "simple-git-hooks",
     "prepublishOnly": "pnpm run build",
-    "release": "release-it",
     "test": "vitest",
     "typecheck": "tsc"
   },
@@ -52,8 +51,6 @@
     "eslint": "^9.4.0",
     "eslint-config-hyoban": "3.0.0-beta.16",
     "lint-staged": "^15.2.5",
-    "release-it": "^17.3.0",
-    "release-it-pnpm": "^4.6.1",
     "simple-git-hooks": "^2.11.1",
     "typescript": "5.5.1-rc",
     "vitest": "^1.6.0"

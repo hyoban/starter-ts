@@ -5,8 +5,9 @@
   "packageManager": "pnpm@9.3.0",
   "description": "$description$",
   "author": {
-    "name": "hyoban",
-    "url": "https://github.com/hyoban"
+    "name": "Stephen Zhou",
+    "url": "https://hyoban.cc",
+    "email": "hi@hyoban.cc"
   },
   "license": "MIT",
   "homepage": "https://github.com/hyoban/pkg-placeholder#readme",

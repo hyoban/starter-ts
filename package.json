@@ -21,24 +21,24 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/es/index.d.ts",
-        "default": "./dist/es/index.js"
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       },
       "require": {
-        "types": "./dist/cjs/index.d.cts",
-        "default": "./dist/cjs/index.cjs"
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
       }
     }
   },
-  "main": "./dist/cjs/index.cjs",
-  "module": "./dist/es/index.js",
-  "types": "./dist/es/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "bunchee",
-    "dev": "bunchee --watch",
+    "build": "vite build",
+    "dev": "vite build --watch",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "prepublishOnly": "pnpm run build",
@@ -47,10 +47,11 @@
   },
   "devDependencies": {
     "@types/node": "^20.14.7",
-    "bunchee": "^5.2.1",
     "eslint": "^9.5.0",
     "eslint-config-hyoban": "3.0.0-beta.19",
     "typescript": "^5.5.2",
+    "vite": "^5.3.1",
+    "vite-plugin-dts": "^3.9.1",
     "vitest": "^1.6.0"
   }
 }

@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "target": "es2022",
+    "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
@@ -20,10 +21,7 @@
     "noEmit": true,
 
     /* If your code doesn't run in the DOM: */
-    "lib": ["es2022"],
-
-    "isolatedDeclarations": true,
-    "composite": true
+    "lib": ["es2022"]
   },
   "exclude": ["dist"]
 }

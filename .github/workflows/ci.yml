@@ -34,8 +34,12 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v3
-        with:
-          run_install: true
+
+      - name: Setup
+        run: npm i -g @antfu/ni
+
+      - name: Install
+        run: nci
 
       - name: Install Global Packages
         if: ${{ matrix.os == 'ubuntu-latest' }}

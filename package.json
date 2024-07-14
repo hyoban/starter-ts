@@ -54,14 +54,14 @@
     "eslint": "^9.7.0",
     "eslint-config-hyoban": "3.0.0-beta.27",
     "lint-staged": "^15.2.7",
-    "release-it": "^17.5.0",
+    "release-it": "^17.6.0",
     "release-it-pnpm": "^4.6.2",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.5.3",
     "vitest": "^2.0.2"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
     "*": "eslint --fix"

@@ -49,16 +49,16 @@
   },
   "devDependencies": {
     "@antfu/ni": "^0.22.0",
-    "@types/node": "^20.14.10",
+    "@types/node": "^20.14.11",
     "bunchee": "^5.2.2",
     "eslint": "^9.7.0",
-    "eslint-config-hyoban": "3.0.0-beta.27",
+    "eslint-config-hyoban": "3.0.0-beta.30",
     "lint-staged": "^15.2.7",
     "release-it": "^17.6.0",
-    "release-it-pnpm": "^4.6.2",
+    "release-it-pnpm": "^4.6.3",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.5.3",
-    "vitest": "^2.0.2"
+    "vitest": "^2.0.3"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"

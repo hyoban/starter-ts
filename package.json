@@ -2,7 +2,7 @@
   "name": "pkg-placeholder",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@10.0.0",
+  "packageManager": "pnpm@10.6.5",
   "description": "$description$",
   "author": {
     "name": "Stephen Zhou",
@@ -48,17 +48,17 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@antfu/ni": "^23.2.0",
-    "@types/node": "^22.10.7",
-    "bunchee": "^6.3.1",
-    "eslint": "^9.18.0",
-    "eslint-config-hyoban": "3.2.0",
-    "lint-staged": "^15.4.1",
-    "release-it": "^18.1.1",
+    "@antfu/ni": "^24.3.0",
+    "@types/node": "^22.13.13",
+    "bunchee": "^6.5.0",
+    "eslint": "^9.23.0",
+    "eslint-config-hyoban": "4.0.2",
+    "lint-staged": "^15.5.0",
+    "release-it": "^18.1.2",
     "release-it-pnpm": "^4.6.4",
-    "simple-git-hooks": "^2.11.1",
-    "typescript": "^5.7.3",
-    "vitest": "^3.0.2"
+    "simple-git-hooks": "^2.12.1",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
